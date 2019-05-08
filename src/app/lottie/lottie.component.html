@@ -1,0 +1,21 @@
+<div class="lotties-container">
+  <div [@fadeOnHover]="isMouseOver ? 'open' : 'closed'" class="lottie-blocks-container">
+    <lottie-animation-view
+        [options]="lottieBlocks"
+        [width]="300"
+        [height]="300"
+        (mouseenter)="mouseEnter()"
+        (mouseleave)="mouseLeave()"
+        (animCreated)="handleAnimation($event)">
+    </lottie-animation-view>
+  </div>
+  <lottie-animation-view
+      class="deadpool"
+      [options]="lottieDeadpool"
+      [width]="300"
+      [height]="300"
+      (mouseenter)="mouseEnter()"
+      (mouseleave)="mouseLeave()"
+      (animCreated)="handleAnimation($event)">
+  </lottie-animation-view>
+</div>

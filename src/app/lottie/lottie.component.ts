@@ -33,6 +33,7 @@ export class LottieComponent implements OnInit {
     public isMouseOver: any = false;
     public lottieBlocks: Object;
     public lottieDeadpool: Object;
+    public lottieBounce: Object;
     private lotties: any[] = [];
     private animationSpeed: number = 0.2;
 
@@ -50,6 +51,12 @@ export class LottieComponent implements OnInit {
             autoplay: true,
             loop: true
         };
+        this.lottieBounce = {
+          path: 'https://assets2.lottiefiles.com/datafiles/qm9uaAEoe13l3eQ/data.json',
+          renderer: 'canvas',
+          autoplay: true,
+          loop: true
+        }
     }
 
     handleAnimation(anim: any) {

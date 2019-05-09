@@ -16,7 +16,7 @@ import {
         opacity: 1
       })),
       state('closed', style({
-        opacity: 0.1
+        opacity: 0.09
       })),
       transition('open=>closed', [
         animate('1s')
@@ -39,13 +39,13 @@ export class LottieComponent implements OnInit {
 
     constructor() {
         this.lottieBlocks = {
-            path: 'https://labs.nearpod.com/bodymovin/demo/al_boardman/articulation/articulation.json',
+            path: '../../assets/articulation.json',
             renderer: 'canvas',
             autoplay: true,
             loop: true
         };
         this.lottieDeadpool = {
-            path: 'https://assets1.lottiefiles.com/datafiles/uIqOUNaohkgyRYQ/data.json',
+            path: '../../assets/deadpool.json',
             renderer: 'canvas',
             autoplay: true,
             loop: true
@@ -69,7 +69,7 @@ export class LottieComponent implements OnInit {
     mouseLeave() {
       this.isMouseOver = false;
       this.lotties.forEach( function(lottie) {
-        lottie.setSpeed(2.0)
+        lottie.setSpeed(0.6)
       });
     }
 }

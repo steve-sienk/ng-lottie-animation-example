@@ -16,11 +16,24 @@
       (mouseleave)="mouseLeave()"
       (animCreated)="handleAnimation($event)">
   </lottie-animation-view>
-  <div *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]; ">
-    <lottie-animation-view
-      class="bouncy"
-      [options]="lottieBounce"
-      (animCreated)="handleAnimation($event)">
-    </lottie-animation-view>
+  <div class="extra-things-container">
+    <div class="dna-container">
+      <div *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11]; ">
+        <lottie-animation-view
+          class="bouncy"
+          [options]="lottieBounce"
+          (animCreated)="handleAnimation($event)">
+        </lottie-animation-view>
+      </div>
+    </div>
+    <div class="dna-container">
+      <lottie-animation-view
+        class="dnaThing"
+        *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11];"
+        width="200"
+        [options]="lottieDna"
+        (animCreated)="handleAnimation($event)">
+      </lottie-animation-view>
+    </div>
   </div>
 </div>

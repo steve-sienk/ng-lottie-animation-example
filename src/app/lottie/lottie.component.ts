@@ -34,6 +34,7 @@ export class LottieComponent implements OnInit {
     public lottieBlocks: Object;
     public lottieDeadpool: Object;
     public lottieBounce: Object;
+    public lottieDna: Object;
     private lotties: any[] = [];
     private animationSpeed: number = 0.2;
 
@@ -53,6 +54,12 @@ export class LottieComponent implements OnInit {
         };
         this.lottieBounce = {
           path: 'https://assets2.lottiefiles.com/datafiles/qm9uaAEoe13l3eQ/data.json',
+          renderer: 'canvas',
+          autoplay: true,
+          loop: true
+        }
+        this.lottieDna = {
+          path: 'https://assets6.lottiefiles.com/datafiles/k8dQgGd6PgypQ3N/data.json',
           renderer: 'canvas',
           autoplay: true,
           loop: true
